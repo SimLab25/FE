@@ -1,0 +1,88 @@
+.daftar-asisten-container {
+  margin-left: 24px; /* ganti dari margin 200px */
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.daftar-asisten-container h2 {
+  text-align: left;
+  margin-bottom: 24px;
+  color: #0a3e9b;
+  font-size: 20px;
+}
+
+.asisten-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.asisten-form label {
+  font-weight: 500;
+  display: block;
+}
+
+.asisten-form input[type="text"],
+.asisten-form input[type="file"] {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 6px;
+  display: block;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #333;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.matkul-section {
+  margin-top: 12px;
+}
+
+.matkul-section p {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin: 0;
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: #0a3e9b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #083579;
+}
+
+/* Hapus scrollbar horizontal */
+html,
+body {
+  overflow-x: hidden;
+}

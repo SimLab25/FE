@@ -1,0 +1,55 @@
+/* Container utama halaman Asisten Praktikum */
+.asisten-page {
+  padding-left: 24px;
+  padding-right: 32px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+/* Judul halaman */
+.asisten-page h2 {
+  margin-bottom: 16px;
+  color: #0a3e9b;
+  font-size: 20px;
+}
+
+/* Tabel daftar asisten */
+.asisten-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+/* Header dan isi tabel */
+.asisten-table th,
+.asisten-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Warna header tabel */
+.asisten-table th {
+  background-color: #0a3e9b;
+  color: white;
+  font-weight: 600;
+}
+
+/* Tombol pensil dan rekap */
+.asisten-table button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #0a3e9b;
+  transition: color 0.2s ease;
+}
+
+.asisten-table button:hover {
+  color: #06306f;
+}

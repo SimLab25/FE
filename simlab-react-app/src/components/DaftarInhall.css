@@ -1,0 +1,77 @@
+/* Container utama halaman InHAL */
+.inhall-page {
+  padding-left: 24px; /* rata kiri sejajar konten utama */
+  padding-right: 32px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+/* Judul halaman */
+.inhall-page h2 {
+  color: #0a3e9b;
+  margin-bottom: 24px;
+}
+
+/* Grid container untuk card matkul */
+.inhall-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card tiap matkul */
+.inhall-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.inhall-card:hover {
+  transform: translateY(-3px);
+}
+
+.inhall-card .info {
+  margin-bottom: 12px;
+}
+
+/* Daftar checkbox */
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Biaya & tombol kirim di bawah */
+.biaya-bawah {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Tombol submit */
+.submit-btn {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #0a3e9b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #083579;
+}

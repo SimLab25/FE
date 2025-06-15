@@ -1,0 +1,103 @@
+.praktikum-container {
+  padding: 24px;
+  background-color: #f9f9f9;
+  position: relative;
+  min-height: 80vh;
+}
+
+.header-praktikum {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #0a3e9b;
+}
+
+.filter-bar {
+  margin-bottom: 16px;
+}
+
+.filter-bar select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.praktikum-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.praktikum-table th,
+.praktikum-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.praktikum-table th {
+  background-color: #0a3e9b;
+  color: white;
+}
+
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.status-badge.available {
+  background-color: green;
+}
+
+.status-badge.full {
+  background-color: red;
+}
+
+.btn-daftar {
+  padding: 6px 12px;
+  background-color: #0a3e9b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-penuh {
+  padding: 6px 12px;
+  background-color: #ccc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: not-allowed;
+}
+
+.no-data-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 24px 36px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+}

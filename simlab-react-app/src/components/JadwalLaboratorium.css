@@ -1,0 +1,133 @@
+/* JadwalLaboratorium.css */
+
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #0a3d91;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-circle {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.menu-section p {
+  cursor: pointer;
+  margin: 10px 0;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-section ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.menu-section li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+.menu-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-section a:hover {
+  text-decoration: underline;
+}
+
+.bottom-menu p {
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.jadwal-container {
+  flex: 1;
+  padding: 20px 30px;
+  background-color: #f5f5f5;
+  overflow-y: auto;
+}
+
+.header-jadwal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #0a3d91;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-bar select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Removed .filter-bar button styling (since the button was removed) */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #0a3d91;
+  color: white;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}

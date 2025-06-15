@@ -1,0 +1,134 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* hilangkan horizontal scrollbar */
+}
+
+/* Container utama dashboard */
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh; /* pastikan tidak lebih dari viewport */
+  overflow: hidden; /* cegah scroll vertikal ganda */
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #0a3e9b;
+  color: white;
+  width: 200px;
+  height: 100vh;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* scroll jika kontennya panjang */
+}
+
+/* Logo */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.logo-circle {
+  width: 64px;
+  height: 64px;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.logo-text {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Menu */
+.menu-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-title {
+  margin: 16px 0 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding-left: 18px;
+  margin: 0 0 10px;
+}
+
+.menu-section ul li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.menu-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-section ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Submenu */
+.submenu-toggle {
+  font-size: 13px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 4px;
+}
+
+.submenu {
+  padding-left: 16px;
+}
+
+.submenu li {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.submenu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  text-decoration: underline;
+}
+
+/* Ikon */
+.icon-right {
+  margin-left: 6px;
+}
+
+/* Tombol bawah */
+.bottom-menu {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.bottom-menu p {
+  font-size: 13px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}

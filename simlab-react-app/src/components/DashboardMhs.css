@@ -1,0 +1,66 @@
+/* DashboardMhs.css */
+.dashboard-mhs {
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+}
+
+.main-content {
+  flex: 3;
+}
+
+.praktikum-section h3,
+.informasi-section h3,
+.jadwal-title-left {
+  margin-bottom: 16px;
+}
+
+.card-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.kelas-card {
+  background-color: #f1f1f1;
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 240px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #dcdcdc;
+}
+
+.kelas-btn {
+  margin-top: 10px;
+  background-color: #0a3e9b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.informasi-section .info-box {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+  border-left: 4px solid #063d9e;
+}
+
+.jadwal-area {
+  flex: 1;
+}
+
+.jadwal-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #dcdcdc;
+}
+
+.jadwal-list li {
+  margin-bottom: 14px;
+}

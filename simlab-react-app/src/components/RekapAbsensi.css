@@ -1,0 +1,67 @@
+.rekap-page {
+  padding: 24px;
+  margin-left: 200px;
+}
+
+.rekap-page h2 {
+  color: #0a3e9b;
+  margin-bottom: 16px;
+}
+
+.rekap-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.rekap-table th,
+.rekap-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.rekap-table th {
+  background-color: #0a3e9b;
+  color: white;
+}
+
+.rekap-table button {
+  background-color: #0a3e9b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.rekap-detail {
+  margin-top: 30px;
+}
+
+.rekap-detail table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rekap-detail th,
+.rekap-detail td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.rekap-detail th {
+  background-color: #0a3e9b;
+  color: white;
+}
+
+.btn-back {
+  margin-top: 20px;
+  background-color: #0a3e9b;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
