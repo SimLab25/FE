@@ -1,22 +1,33 @@
+/* DaftarPraktikum.css */
+
 .praktikum-container {
+  margin-left: 24px;
+  margin-top: 20px;
   padding: 24px;
-  background-color: #f9f9f9;
-  position: relative;
-  min-height: 80vh;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 95%;
+  box-sizing: border-box;
 }
 
 .header-praktikum {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 20px;
+}
+
+.header-praktikum h2 {
+  font-size: 20px;
+  color: #0a3e9b;
 }
 
 .back-btn {
   background: none;
   border: none;
-  cursor: pointer;
   font-size: 18px;
+  cursor: pointer;
   color: #0a3e9b;
 }
 
@@ -25,7 +36,7 @@
 }
 
 .filter-bar select {
-  padding: 8px 12px;
+  padding: 8px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
@@ -34,18 +45,14 @@
 .praktikum-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
 }
 
 .praktikum-table th,
 .praktikum-table td {
-  border: 1px solid #ddd;
-  padding: 12px;
+  border: 1px solid #ccc;
+  padding: 10px;
   text-align: center;
-  font-size: 14px;
 }
 
 .praktikum-table th {
@@ -53,51 +60,58 @@
   color: white;
 }
 
-.status-badge {
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-weight: bold;
-  color: white;
-  display: inline-block;
-  min-width: 80px;
-}
-
-.status-badge.available {
-  background-color: green;
-}
-
-.status-badge.full {
-  background-color: red;
-}
-
-.btn-daftar {
-  padding: 6px 12px;
+.btn-detail {
   background-color: #0a3e9b;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
   cursor: pointer;
 }
 
-.btn-penuh {
-  padding: 6px 12px;
-  background-color: #ccc;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: not-allowed;
+.btn-detail:hover {
+  background-color: #083579;
 }
 
-.no-data-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 24px 36px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-size: 18px;
-  color: #666;
+.detail-table {
+  width: 90%;
+  margin: 12px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.detail-table caption {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px;
+  color: #0a3e9b;
+}
+
+.detail-table th,
+.detail-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
   text-align: center;
+}
+
+.detail-table th {
+  background-color: #0a3e9b;
+  color: white;
+}
+
+.btn-simpan {
+  background-color: #0a3e9b;
+  color: white;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.btn-simpan:hover {
+  background-color: #083579;
 }

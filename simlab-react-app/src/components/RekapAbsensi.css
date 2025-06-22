@@ -1,17 +1,23 @@
 .rekap-page {
-  padding: 24px;
-  margin-left: 200px;
+  padding: 24px 32px;
 }
 
 .rekap-page h2 {
   color: #0a3e9b;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+}
+
+.rekap-page p {
+  margin: 4px 0;
+  font-weight: 500;
 }
 
 .rekap-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  background-color: white;
+  margin-top: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .rekap-table th,
@@ -30,38 +36,63 @@
   background-color: #0a3e9b;
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 6px 14px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.rekap-detail {
-  margin-top: 30px;
+.detail-container {
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
 }
 
-.rekap-detail table {
+.detail-title {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.detail-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.rekap-detail th,
-.rekap-detail td {
-  border: 1px solid #ddd;
-  padding: 10px;
+.detail-table th,
+.detail-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
   text-align: center;
 }
 
-.rekap-detail th {
+.detail-table th {
   background-color: #0a3e9b;
   color: white;
 }
 
-.btn-back {
+.check {
+  color: #6a1b9a;
+  font-weight: bold;
+}
+
+.cross {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.edit-button {
+  background-color: transparent;
+  border: none;
+  color: #0a3e9b;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-button {
   margin-top: 20px;
+  padding: 8px 16px;
   background-color: #0a3e9b;
   color: white;
-  padding: 10px 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
 }

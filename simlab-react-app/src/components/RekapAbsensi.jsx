@@ -2,33 +2,50 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./RekapAbsensi.css";
+import { FaEdit } from "react-icons/fa";
 
-const pertemuanList = [
-  { no: 1, tanggal: "10 Maret 2025" },
-  { no: 2, tanggal: "17 Maret 2025" },
-  { no: 3, tanggal: "24 Maret 2025" },
-  { no: 4, tanggal: "31 Maret 2025" },
-  { no: 5, tanggal: "7 April 2025" },
-  { no: 6, tanggal: "14 April 2025" },
-  { no: 7, tanggal: "21 April 2025" },
-  { no: 8, tanggal: "28 April 2025" },
-  { no: 9, tanggal: "5 Mei 2025" },
-  { no: 10, tanggal: "12 Mei 2025" },
-];
-
-const dummyData = [
-  { nim: "2117051001", nama: "Agung Prasetyo", hadir: true },
-  { nim: "2117051005", nama: "Lina Fadila", hadir: false },
-  { nim: "2117051010", nama: "Danu Wibowo", hadir: true },
-];
+const dummyData = {
+  tanggal: [
+    "10 Maret 2025",
+    "17 Maret 2025",
+    "24 Maret 2025",
+    "31 Maret 2025",
+    "7 April 2025",
+    "14 April 2025",
+    "21 April 2025",
+    "28 April 2025",
+    "5 Mei 2025",
+    "12 Mei 2025",
+  ],
+  detail: {
+    1: [
+      { nim: "2117051001", nama: "Agung Prasetyo", hadir: true },
+      { nim: "2117051005", nama: "Lina Fadila", hadir: false },
+      { nim: "2117051010", nama: "Danu Wibowo", hadir: true },
+    ],
+    // Tambahkan data detail per pertemuan jika perlu
+  },
+};
 
 const RekapAbsensi = () => {
   const { matkul, kelas } = useParams();
   const navigate = useNavigate();
-  const [visiblePertemuan, setVisiblePertemuan] = useState(null);
+  const [expanded, setExpanded] = useState(null);
+  const [detailData, setDetailData] = useState(dummyData.detail);
 
-  const toggleDetail = (no) => {
-    setVisiblePertemuan((prev) => (prev === no ? null : no));
+  const toggleExpand = (pertemuan) => {
+    setExpanded((prev) => (prev === pertemuan ? null : pertemuan));
+  };
+
+  const toggleHadir = (pertemuan, index) => {
+    setDetailData((prev) => {
+      const updated = [...prev[pertemuan]];
+      updated[index] = {
+        ...updated[index],
+        hadir: !updated[index].hadir,
+      };
+      return { ...prev, [pertemuan]: updated };
+    });
   };
 
   return (
@@ -50,38 +67,55 @@ const RekapAbsensi = () => {
           </tr>
         </thead>
         <tbody>
-          {pertemuanList.map((p) => (
-            <React.Fragment key={p.no}>
+          {dummyData.tanggal.map((tanggal, idx) => (
+            <React.Fragment key={idx}>
               <tr>
-                <td>{p.no}</td>
-                <td>{p.tanggal}</td>
+                <td>{idx + 1}</td>
+                <td>{tanggal}</td>
                 <td>
-                  <button onClick={() => toggleDetail(p.no)}>
-                    {visiblePertemuan === p.no ? "Sembunyikan" : "Lihat Data"}
+                  <button onClick={() => toggleExpand(idx + 1)}>
+                    {expanded === idx + 1 ? "Sembunyikan" : "Lihat Data"}
                   </button>
                 </td>
               </tr>
-              {visiblePertemuan === p.no && (
+              {expanded === idx + 1 && detailData[expanded] && (
                 <tr className="detail-row">
                   <td colSpan="3">
-                    <div className="rekap-detail">
-                      <h4>Detail Mahasiswa – Pertemuan {p.no}</h4>
-                      <table>
+                    <div className="detail-container">
+                      <p className="detail-title">
+                        Detail Mahasiswa – Pertemuan {expanded}
+                      </p>
+                      <table className="detail-table">
                         <thead>
                           <tr>
                             <th>No</th>
                             <th>NIM</th>
                             <th>Nama</th>
                             <th>Hadir</th>
+                            <th>Aksi</th>
                           </tr>
                         </thead>
                         <tbody>
-                          {dummyData.map((mhs, i) => (
+                          {detailData[expanded].map((mhs, i) => (
                             <tr key={i}>
                               <td>{i + 1}</td>
                               <td>{mhs.nim}</td>
                               <td>{mhs.nama}</td>
-                              <td>{mhs.hadir ? "✔️" : "❌"}</td>
+                              <td>
+                                {mhs.hadir ? (
+                                  <span className="check">✔</span>
+                                ) : (
+                                  <span className="cross">✘</span>
+                                )}
+                              </td>
+                              <td>
+                                <button
+                                  className="edit-button"
+                                  onClick={() => toggleHadir(expanded, i)}
+                                >
+                                  <FaEdit />
+                                </button>
+                              </td>
                             </tr>
                           ))}
                         </tbody>
@@ -96,7 +130,7 @@ const RekapAbsensi = () => {
       </table>
 
       <button
-        className="btn-back"
+        className="back-button"
         onClick={() => navigate("/asisten-praktikum")}
       >
         Kembali ke Asisten Praktikum

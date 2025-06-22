@@ -15,9 +15,6 @@ const matkulList = [
 ];
 
 const DaftarAsisten = () => {
-  const [nama, setNama] = useState("");
-  const [nim, setNim] = useState("");
-  const [angkatan, setAngkatan] = useState("");
   const [khsFile, setKhsFile] = useState(null);
   const [selectedMatkul, setSelectedMatkul] = useState([]);
 
@@ -31,24 +28,15 @@ const DaftarAsisten = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!nama || !nim || !angkatan || !khsFile || selectedMatkul.length === 0) {
-      alert("Semua field wajib diisi dan minimal satu matkul harus dipilih.");
+    if (!khsFile || selectedMatkul.length === 0) {
+      alert("Upload KHS dan pilih minimal satu mata kuliah.");
       return;
     }
 
-    // Simulasi pengiriman
-    console.log("Data Pendaftaran:");
-    console.log("Nama:", nama);
-    console.log("NIM:", nim);
-    console.log("Angkatan:", angkatan);
     console.log("KHS:", khsFile.name);
     console.log("Matkul Dipilih:", selectedMatkul);
 
     alert("Pendaftaran berhasil dikirim!");
-    // Reset form
-    setNama("");
-    setNim("");
-    setAngkatan("");
     setKhsFile(null);
     setSelectedMatkul([]);
   };
@@ -57,33 +45,6 @@ const DaftarAsisten = () => {
     <div className="daftar-asisten-container">
       <h2>Daftar Asisten Praktikum</h2>
       <form onSubmit={handleSubmit} className="asisten-form">
-        <label>
-          Nama:
-          <input
-            type="text"
-            value={nama}
-            onChange={(e) => setNama(e.target.value)}
-          />
-        </label>
-
-        <label>
-          NIM:
-          <input
-            type="text"
-            value={nim}
-            onChange={(e) => setNim(e.target.value)}
-          />
-        </label>
-
-        <label>
-          Angkatan:
-          <input
-            type="text"
-            value={angkatan}
-            onChange={(e) => setAngkatan(e.target.value)}
-          />
-        </label>
-
         <label>
           Upload KHS:
           <input
